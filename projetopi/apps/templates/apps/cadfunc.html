@@ -1,0 +1,54 @@
+{% extends 'baseadmin.html' %}
+{% load static %}
+
+{% block title %} Cadastro de funcionario {% endblock %}
+
+{% block content%}
+<div class="login">
+    <div class="titulo1">Cadastro de Funcionarios<br></div>
+    <!--<form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        
+        
+    </form>-->
+
+
+    <form action="{% url 'cadFunc' %}" method="post">
+        {% csrf_token %}
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" for="nome">Nome</span>
+            <input type="text" class="form-control" id="nome" name="nome">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Telefone</span>
+            <input type="text" class="form-control" id="telefone" name="telefone">
+        </div>
+          
+        <div class="input-group mb-3">
+            <span class="input-group-text">Email</span>
+            <input type="text" class="form-control" id="email" name="email">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Senha</span>
+            <input type="password" class="form-control" id="senha" name="senha">
+            <span class="input-group-text" id="olho"><i class="fas fa-eye"></i></span>
+        </div>
+
+        <div class="centralizador">
+            <div class="text-center">
+                <input type="submit" class="btn btn-cadastrar" value="Salvar">
+                <button class="btn btn-entrar" type="button" onclick="sairAdmin()">Sair</button></span>
+            </div>
+        </div>
+
+    </form>
+        
+        
+</div>
+{% endblock %}

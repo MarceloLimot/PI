@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Contato {% endblock %}
+
+{% block content%}
+<section id="conteudo">
+    <!--
+    <section id="fundo">
+        <img src="Imagens/background1.jpg" class="imagemfundo">
+    </section>-->
+    <div class="cartao">
+        <div class="titulo1"><br>Localização</div>
+        <div class="texto2">
+            Estamos Localizados na <br> Rua Campinas do Piauí, n° 22 – Itaquera
+        </div>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7489087089!2d-46.45931348442806!3d-23.541531766746836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66bfa0e5004d%3A0x7c560595f8d1184a!2sR.%20Campinas%20do%20Piau%C3%AD%2C%2022%20-%20Itaquera%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008210-000!5e0!3m2!1spt-BR!2sbr!4v1636728021416!5m2!1spt-BR!2sbr" 
+            width="45vw" height="45vw" style="border:0;" 
+            allowfullscreen="" loading="lazy" >
+            </iframe>
+        </div>
+        <div class="titulo1">Faça uma doação via PIX</div>
+        <div class="texto2">
+            CNPJ: 27.549.654/0001-25<br>
+            Email: financeiro.eefa@gmail.com
+        </div>
+
+        <div class="texto6">Nos siga no facebook</div>
+        <a href="https://www.facebook.com/fraternidadeeamor1"> 
+            <img src="{% static 'img/facebook.png' %}" class="socialbutton">
+        </a>
+    </div>
+</section>
+{% endblock %}

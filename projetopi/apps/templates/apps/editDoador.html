@@ -1,0 +1,80 @@
+{% extends 'baseadmin.html' %}
+{% load static %}
+
+{% block title %} Editando '{{task.nome}}' {% endblock %}
+
+{% block content%}
+<div class="geral">
+    <div class="texto2">Editando {{task.nome}}<br></div>
+    <form method="POST">
+        {% csrf_token %}
+        <!--{{ form.as_p }}-->
+        <div class="dadospessoais">
+            <div class="texto4">
+                Dados Pessoais:<br><br>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Nome</span>
+                <input type="text" class="form-control" value="{{task.nome}}" id='nome' name='nome'>
+            </div>
+    
+            <div class="input-group mb-3">
+                <span class="input-group-text">Telefone</span>
+                <input type="text" class="form-control" value="{{task.telefone}}" id='telefone' name='telefone'>
+            </div>
+              
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email</span>
+                <input type="text" class="form-control" value="{{task.email}}" id='email' name='email'>
+            </div>
+    
+            <div class="input-group mb-3">
+                <span class="input-group-text">Senha</span>
+                <input type="password" class="form-control" value="{{task.senha}}" id="senha" name='senha'>
+                <span class="input-group-text" id="olho"><i class="fas fa-eye"></i></span>
+            </div>
+
+        </div>
+        
+
+        <div class="dadospessoais">
+            <div class="texto4">
+                Endereço:
+            </div>
+            
+            <div class="input-group mb-3">
+                <span class="input-group-text">Rua</span>
+                <input type="text" class="form-control" value="{{task.rua}}" id='rua' name='rua'>
+            </div>
+              
+            <div class="input-group mb-3">
+                <span class="input-group-text">N°</span>
+                <input type="text" class="form-control" value="{{task.numero}}" id='numero' name='numero'>
+                <span class="input-group-text">Bairro</span>
+                <input type="text" class="form-control" value="{{task.bairro}}" id='bairro' name='bairro'>
+            </div>
+    
+            <div class="input-group mb-3">
+                <span class="input-group-text">Cep°</span>
+                <input type="text" class="form-control" value="{{task.cep}}" id='cep' name='cep'>
+                <span class="input-group-text">Complemento</span>
+                <input type="text" class="form-control" value="{{task.complemento}}" id='complemento' name='complemento'>
+            </div>
+    
+            <div class="input-group mb-3">
+                <span class="input-group-text">Cidade</span>
+                <input type="text" class="form-control" value="{{task.cidade}}" id='cidade' name='cidade'>
+                <span class="input-group-text">Estado</span>
+                <input type="text" class="form-control" value="{{task.estado}}" id='estado' name='estado'>
+                
+            </div>
+            <div class="centralizador">
+                <div class="text-center">
+                        <input type="submit" class="btn btn-cadastrar" value="Salvar">
+                </div>
+            </div>
+        </div>  
+        
+    </form>
+</div>
+{% endblock %}

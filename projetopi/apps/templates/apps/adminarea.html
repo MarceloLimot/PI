@@ -1,0 +1,31 @@
+{% extends 'baseadmin.html' %}
+
+{% block title %} Area Administrativa {% endblock %}
+
+{% block content%}
+
+<section id="conteudo">
+    <div class="geral">
+        <div class="titulo3">Escolha o que deseja fazer: </div>
+        <div class="text-center">
+            <div class="d-grid gap-1 d-md-block">
+                <button class="btn btn-cadAdmin" type="button" onclick="listaLogin()">Area <br> Funcionarios</button>
+                <button class="btn btn-cadAdmin" type="button" onclick="listaDonat()">Area <br> Donatarios</button>
+            </div><br>
+
+            <div class="d-grid gap-1 d-md-block">
+                <button class="btn btn-cadAdmin" type="button" onclick="listaDoador()">Area <br> Doadores</button>
+                <button class="btn btn-cadAdmin" type="button" onclick="">Area <br> Doações</button>
+            </div><br>
+
+            <div class="d-grid gap-1 d-md-block">
+                <button class="btn btn-cadAdmin" type="button" onclick="">Alertas</button>
+                <a href="accounts/logout"><button class="btn btn-cadAdmin" type="button">Sair</button></a>
+            </div><br>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

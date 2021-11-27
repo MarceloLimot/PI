@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Sobre {% endblock %}
+
+{% block content%}
+<section id="conteudo">
+    <div class="cartao2">
+        <div class="titulo1"><br>Nossa História</div>
+        <div class="texto1"><br>A Fraternidade e Amor nasceu de um encontro de amigos, com um único objetivo, o de unir corações, e fazer do Espiritismo uma doutrina de amor, independentemente da religião.
+            A principio nossos encontros tinha o intuito de montar um novo Grupo Espírita. <br>Foram várias reuniões e planejamentos em locais improvisados, tendo se concretizado nosso primeiro encontro como Fraternidade e Amor no dia 02 de abril de 2015 no espaço “La Belle”, onde iniciamos nossas atividades ao público com palestras, atendimentos e passes. Permanecemos nesse local até início de Setembro/2015. 
+            <br>Mudamos depois para Rua Campinas do Piauí, n° 22 – Itaquera, onde no dia 15 de setembro de 2015 inauguramos o novo espaço com uma Palestra Pública.
+            <br>Nossas atividades consistem em palestras as terças e sextas-feiras, passes, estudos das obras de Kardec, Socorro Espiritual, Assistência Fraterna com entrevista às 4ª feiras, evangelização infantil em conjunto com os temas das palestras.
+            Assim quem tiver interesse de nos auxiliar e participar do projeto, pode nos procurar.
+        </div>
+        <section id="fotos">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{% static 'img/jesus5.jpg' %}" class="d-block" alt="Jesus">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'img/jesus2.jpg' %}" class="d-block" alt="Jesus">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'img/jesus3.jpg' %}" class="d-block" alt="Jesus">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+    </div>
+</section>
+{% endblock %}

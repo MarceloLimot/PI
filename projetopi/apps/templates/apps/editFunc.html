@@ -1,0 +1,53 @@
+{% extends 'baseadmin.html' %}
+{% load static %}
+
+{% block title %} Editando {{task.nome}} {% endblock %}
+
+{% block content%}
+<div class="login2">
+    <div class="texto2">Editando {{task.nome}}<br><br></div>
+    <form method="post">
+        {% csrf_token %}
+        <!--{{ form.as_p }}-->
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nome</span>
+            <input type="text" class="form-control" value="{{task.nome}}" id="nome" name="nome">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Telefone</span>
+            <input type="text" class="form-control" value="{{task.telefone}}" id="telefone" name="telefone">
+        </div>
+          
+        <div class="input-group mb-3">
+            <span class="input-group-text">Email</span>
+            <input type="text" class="form-control" value="{{task.email}}" id="email" name="email">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Senha</span>
+            <input type="password" class="form-control" value="{{task.senha}}" id="senha" name="senha">
+            <span class="input-group-text" id="olho"><i class="fas fa-eye"></i></span>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nivel</span>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>{{task.nivel}}</option>
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+              </select>
+        </div>
+
+
+        <div class="centralizador">
+            <div class="text-center">
+                <input type="submit" class="btn btn-cadastrar" value="Salvar">
+            </div>
+            
+        </div>
+        
+    </form>
+</div>
+{% endblock %}

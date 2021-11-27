@@ -1,0 +1,66 @@
+{% extends 'baseadmin.html' %}
+
+{% block title %} Funcionarios {% endblock %}
+
+{% block content%}
+
+<div class="geral">
+    <div class="titulo1">
+        Escolha o funcionario a ser editado
+    </div>
+    <div class="containerlist">
+        <ul class="task-list">
+            {% for task in logins%}
+            <li class="task-item">
+                <span class="funcionarios"><a href="/task/{{task.id}}">{{task.nome}}</a></span>
+                <a href="deleteFunc/{{task.id}}"><span><button class="btn btn-deletar" type="button" onclick="deleteFunc()">Deletar</button></span></a>
+                <a href="editFunc/{{task.id}}"><span><button class="btn btn-editar" type="button" onclick="editFunc()">Editar</button></span></a>        
+            </li>
+            {% endfor %}  
+        </ul>         
+    </div>
+    <div class="pagination">
+        <span class="step-links">
+            {% if logins.has_previous %}
+                <a href="?page={{ logins.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+            {% endif %}
+
+            <span class="current">
+                {{ logins.number }} de {{ logins.paginator.num_pages }}
+            </span>
+
+            {% if logins.has_next %}
+                <a href="?page={{ logins.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+            {% endif %}
+        </span>
+    </div>
+    <div class="centralizador">
+        <div class="text-center">
+            
+            <div class="d-grid gap-1 d-md-block">
+                <button class="btn btn-entrar" type="button" onclick="cadFunc()">Cadastrar Novo</button></span>
+                <button class="btn btn-entrar" type="button" onclick="sairADM()">Sair</button></span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<!-- 
+  <div class="container">
+    <ul class="task-list">
+        {% for task in logins%}
+        <li class="task-item">
+            <span><a href="/task/{{task.id}}">{{task.usuario}}</a></span>
+            <span><i class="fas fa-eye"></i></span>
+        </li>
+        {% endfor %}
+    </ul>
+  </div> 
+--> 
+
+
+
+
+{% endblock %}
